@@ -4,11 +4,11 @@ function Home() {
   return (
     <div>
       <div className="bg-[url('./src/assets/images/Poster.png')] bg-cover bg-center bg-no-repeat h-96">
-        <div className="ml-4 pt-2">
+        <div className="ml-4 pt-2 mr-4 sm:ml-8 sm:mr-8">
           <Nav />
           
           <div className="text-white max-w-xs">
-            <div className="mt-6 text-2xl font-medium mb-4">
+            <div className="mt-6 text-2xl font-medium mb-4 sm:text-3xl sm:mt-16 sm:font-semibold sm:mb-6">
               <p>John Wick 3 :</p>
               <p>Parabellum</p>
             </div>
