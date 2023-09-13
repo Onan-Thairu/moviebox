@@ -1,3 +1,4 @@
+import MovieCard from "../components/MovieCard"
 import Nav from "../components/Nav"
 
 function Home() {
@@ -36,6 +37,19 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8">
+        <div className="flex justify-between items-center bg-yellow-200">
+          <div>
+            <p className="text-lg tracking-wide font-semibold mb-8">Featured Movie</p>
+          </div>
+          <div className="flex items-center">
+            <p>See more</p>
+            <img src="./src/assets/icons/right-arrow.svg" alt="arrow" />
+          </div>
+        </div>
+        <MovieCard />
       </div>
     </div>
   )
