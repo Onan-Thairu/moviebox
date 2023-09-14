@@ -57,7 +57,7 @@ function Home() {
               and with a $14 million price tag on his head, he is the target of hit men and women everywhere.
             </p>
 
-            <div className="flex items-center gap-2 w-44 p-2 rounded-md">
+            <div className="flex items-center gap-2 bg-red-600 w-44 p-2 rounded-md">
               <img src="./src/assets/icons/play-icon.svg" alt="play" />
               <p className="text-sm tracking-wide font-medium">WATCH TRAILER</p>
             </div>
