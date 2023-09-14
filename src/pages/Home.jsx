@@ -1,11 +1,37 @@
+import { useState } from "react"
+
 import MovieCard from "../components/MovieCard"
 import Nav from "../components/Nav"
+import { useEffect } from "react"
 
 function Home() {
+  const [popular, setPopular] = useState([])
+
+  useEffect(() => {
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN}`
+      }
+    }
+
+    fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+      .then(res => res.json())
+      .then(data => {
+        const topMovies = data.results.slice(0, 12)
+        setPopular(topMovies)
+        console.log(popular);
+      })
+      .catch(error => {
+        throw new Error(error)
+      })
+  }, [])
+
   return (
     <div>
       <div className="bg-[url('./src/assets/images/Poster.png')] bg-cover bg-center bg-no-repeat h-96">
-        <div className="ml-4 pt-2 mr-4 sm:ml-8 sm:mr-8">
+        <div className="ml-6 pt-2 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
           <Nav />
           
           <div className="text-white max-w-xs">
@@ -31,7 +57,7 @@ function Home() {
               and with a $14 million price tag on his head, he is the target of hit men and women everywhere.
             </p>
 
-            <div className="flex items-center gap-2 bg-red-600 w-44 p-2 rounded-md">
+            <div className="flex items-center gap-2 w-44 p-2 rounded-md">
               <img src="./src/assets/icons/play-icon.svg" alt="play" />
               <p className="text-sm tracking-wide font-medium">WATCH TRAILER</p>
             </div>
@@ -39,17 +65,29 @@ function Home() {
         </div>
       </div>
 
-      <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8">
-        <div className="flex justify-between items-center bg-yellow-200">
+      <div className="ml-6 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
+
+        <div className="flex justify-between items-center mb-8">
           <div>
-            <p className="text-lg tracking-wide font-semibold mb-8">Featured Movie</p>
+            <p className="text-lg tracking-wide font-semibold">Featured Movie</p>
           </div>
-          <div className="flex items-center">
-            <p>See more</p>
+
+          <div className="flex items-center gap-4 text-red-700">
+            <p className="font-semibold tracking-wide">See more</p>
             <img src="./src/assets/icons/right-arrow.svg" alt="arrow" />
           </div>
         </div>
-        <MovieCard />
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {
+            popular.map((movie) => {
+              return (
+                <MovieCard movie={movie} />
+              )
+            })
+          }
+        </div>
+
       </div>
     </div>
   )
