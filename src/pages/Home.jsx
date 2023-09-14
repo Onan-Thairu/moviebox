@@ -30,8 +30,8 @@ function Home() {
 
   return (
     <div>
-      <div className="bg-[url('./src/assets/images/Poster.png')] bg-cover bg-center bg-no-repeat h-96">
-        <div className="ml-6 pt-2 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
+      <div className="bg-[url('/assets/images/Poster.png')] bg-cover bg-center bg-no-repeat h-96">
+        <div className="ml-4 pt-2 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
           <Nav />
           
           <div className="text-white max-w-xs">
@@ -42,12 +42,12 @@ function Home() {
 
             <div className="flex gap-6 mb-2">
               <div className="flex items-center gap-2">
-                <img src="./src/assets/images/imdb.svg" alt="imdb" />
+                <img src="/assets/images/imdb.svg" alt="imdb" />
                 <p className="text-xs tracking-wider">860/100</p>
               </div>
 
               <div className="flex items-center gap-2">
-                <img src="./src/assets/images/rotten-tomato.svg" alt="tomato" />
+                <img src="/assets/images/rotten-tomato.svg" alt="tomato" />
                 <p className="text-xs tracking-wider">97%</p>
               </div>
             </div>
@@ -58,14 +58,14 @@ function Home() {
             </p>
 
             <div className="flex items-center gap-2 bg-red-600 w-44 p-2 rounded-md">
-              <img src="./src/assets/icons/play-icon.svg" alt="play" />
+              <img src="/assets/icons/play-icon.svg" alt="play" />
               <p className="text-sm tracking-wide font-medium">WATCH TRAILER</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="ml-6 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
+      <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
 
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -74,7 +74,7 @@ function Home() {
 
           <div className="flex items-center gap-4 text-red-700">
             <p className="font-semibold tracking-wide">See more</p>
-            <img src="./src/assets/icons/right-arrow.svg" alt="arrow" />
+            <img src="/assets/icons/right-arrow.svg" alt="arrow" />
           </div>
         </div>
 

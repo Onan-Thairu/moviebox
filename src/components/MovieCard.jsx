@@ -8,11 +8,11 @@ function MovieCard({ movie }) {
         <p className="font-semibold tracking-wide mb-2">{movie.title}</p>    
         <div className="flex justify-between mb-2">
           <div className="flex items-center gap-2">
-            <img src="./src/assets/images/imdb.svg" alt="imdb" className="w-6" />
+            <img src="/assets/images/imdb.svg" alt="imdb" className="w-6" />
             <p className="text-xs tracking-wider">{movie.vote_average}/10</p>
           </div>    
           <div className="flex items-center gap-2">
-            <img src="./src/assets/images/rotten-tomato.svg" alt="imdb" />
+            <img src="/assets/images/rotten-tomato.svg" alt="imdb" />
             <p className="text-xs tracking-wider">{movie.vote_average * 10}%</p>
           </div>
         </div>
