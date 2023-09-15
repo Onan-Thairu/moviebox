@@ -21,7 +21,7 @@ function Home() {
     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
       .then(res => res.json())
       .then(data => {
-        const topMovies = data.results.slice(0, 12)
+        const topMovies = data.results.slice(0, 10)
         setPopular(topMovies)
         console.log(popular);
       })
@@ -73,7 +73,7 @@ function Home() {
 
         <div className="flex justify-between items-center mb-8">
           <div>
-            <p className="text-lg tracking-wide font-semibold">Featured Movie</p>
+            <p className="text-lg tracking-wide font-semibold">Featured Movies</p>
           </div>
 
           <div className="flex items-center gap-4 text-red-700">

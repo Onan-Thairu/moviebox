@@ -1,12 +1,6 @@
-import Sidebar from "../components/Sidebar"
-
 function Detail() {
   return (
     <div>
-      <div>
-        <Sidebar />
-      </div>
-      
       <div>
         <div>
           <img src="/assets/images/top-gun.png" alt="poster"/>

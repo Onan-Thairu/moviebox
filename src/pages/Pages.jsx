@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Detail from "./Detail";
+import DetailsPage from "./DetailsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Pages() {
@@ -7,7 +7,7 @@ export default function Pages() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Home /> }></Route>
-        <Route path="/detail" element={ <Detail /> }></Route>
+        <Route path="/detail" element={ <DetailsPage /> }></Route>
       </Routes>
     </BrowserRouter>
   )
