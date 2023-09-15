@@ -3,6 +3,7 @@ import { useState } from "react"
 import MovieCard from "../components/MovieCard"
 import Nav from "../components/Nav"
 import { useEffect } from "react"
+import Footer from "../components/Footer"
 
 function Home() {
   const [popular, setPopular] = useState([])
@@ -12,7 +13,7 @@ function Home() {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN}`
+        Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN_AUTH}`
       }
     }
 
@@ -31,7 +32,8 @@ function Home() {
   return (
     <div>
       <div className="bg-[url('/assets/images/Poster.png')] bg-cover bg-center bg-no-repeat h-96">
-        <div className="ml-4 pt-2 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
+        {/* <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12"> */}
+        <div className="w-[94%] m-auto pt-2">
           <Nav />
           
           <div className="text-white max-w-xs">
@@ -65,7 +67,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12">
+      {/* <div className="ml-4 mt-8 mr-4 sm:ml-8 sm:mr-8 lg:ml-12"> */}
+      <div className="w-[94%] m-auto mt-8">
 
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -86,6 +89,10 @@ function Home() {
               )
             })
           }
+        </div>
+
+        <div>
+          <Footer />
         </div>
 
       </div>
