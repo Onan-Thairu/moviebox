@@ -4,6 +4,7 @@ import MovieCard from "../components/MovieCard"
 import Nav from "../components/Nav"
 import { useEffect } from "react"
 import Footer from "../components/Footer"
+import { Link } from "react-router-dom"
 
 function Home() {
   const [popular, setPopular] = useState([])
@@ -76,7 +77,7 @@ function Home() {
           </div>
 
           <div className="flex items-center gap-4 text-red-700">
-            <p className="font-semibold tracking-wide">See more</p>
+            <Link to='/detail' className="font-semibold tracking-wide">See more</Link>
             <img src="/assets/icons/right-arrow.svg" alt="arrow" />
           </div>
         </div>
