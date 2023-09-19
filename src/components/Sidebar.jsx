@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 function Sidebar() {
   return (
     <div>
-      <div className="border border-gray-200 rounded-r-large pt-8 h-screen text-gray-500 font-semibold max-w-[86%]">
+      <div className="border border-gray-200 rounded-r-large pt-8 h-screen text-gray-500 font-semibold max-w-[100%]">
         <div className="flex items-center gap-4 pl-2 mb-14">
           <img src="/assets/images/tv.svg" alt="logo" className="w-8" />
           <p className="text-black font-semibold">MovieBox</p>
@@ -41,7 +43,7 @@ function Sidebar() {
 
         <div className="flex gap-3 items-center w-[80%] m-auto mt-6">
           <img src="/assets/icons/logout.svg" alt="logout" className="w-5" />
-          <p className="text text-sm">Logout</p>
+          <Link to="/" className="text text-sm">Logout</Link>
         </div>
 
       </div>

@@ -4,7 +4,7 @@ import Detail from "../components/Detail"
 
 function DetailsPage() {
   return (
-    <div className="flex">
+    <div className="flex gap-6">
       <div>
         <Sidebar />
       </div>
