@@ -1,14 +1,14 @@
 function Detail() {
   return (
     <div>
-      <div className="mt-5">
+      <div className="mt-3">
         <div>
-          <img src="/assets/images/top-gun.png" className="h-96" alt="poster"/>
+          <img src="/assets/images/top-gun.png" className="h-80 w-full" alt="poster"/>
         </div>
 
-        <div className="max-w-[96%] m-auto mt-4">
+        <div className="max-w-[98%] m-auto mt-4">
           <div>
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between max-w-[95%] items-center mb-4">
               <div>
                 <ul className="flex gap-2 items-center text-sm">
                   <p className="font-semibold">Top Gun: Maverick</p>
@@ -52,20 +52,25 @@ function Detail() {
             </div>
 
             <div>
-                <div className="flex bg-red-700 text-white justify-around">
-                  <p>See Showtimes <span><img src="/assets/icons/two-tickets.svg" alt="ticket" /></span></p>
+                <div className="bg-red-700 text-white rounded-lg max-w-[85%] py-2">
+                  <span className="flex items-center w-fit m-auto gap-2">
+                    <img src="/assets/icons/two-tickets.svg" alt="ticket" />
+                    <p className="font-medium">See Showtimes</p>
+                  </span>
                 </div>
   
-                <div>
-                  <img src="/assets/icons/list.svg" alt="list" />
-                  <p>More watch options</p>
+                <div className="bg-red-100 border border-red-700 max-w-[85%] rounded-lg my-4 py-2">
+                  <span className="flex items-center w-fit m-auto gap-2">
+                    <img src="/assets/icons/list.svg" alt="list" />
+                    <p className="font-medium">More watch options</p>
+                  </span>
                 </div>
   
-                <div>
+                <div className="max-w-[85%] relative">
                   <img src="/assets/images/images.png" alt="images" />
-                  <div>
+                  <div className="flex items-center backdrop-blur bg-black/50 absolute bottom-0 w-full">
                     <img src="/assets/icons/white-list.svg" alt="list" />
-                    <p>The Best Movies and Shows in September</p>
+                    <p className="text-white text-xs">The Best Movies and Shows in September</p>
                   </div>
                 </div>
             </div>

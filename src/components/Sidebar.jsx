@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function Sidebar() {
   return (
     <div>
-      <div className="border border-gray-200 rounded-r-large pt-8 h-screen text-gray-500 font-semibold max-w-[100%]">
+      <div className="border border-gray-200 rounded-r-large pt-8 h-screen text-gray-500 font-semibold ">
         <div className="flex items-center gap-4 pl-2 mb-14">
           <img src="/assets/images/tv.svg" alt="logo" className="w-8" />
           <p className="text-black font-semibold">MovieBox</p>
